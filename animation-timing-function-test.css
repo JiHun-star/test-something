@@ -1,0 +1,135 @@
+body {
+  background-color: #242424;
+}
+
+h1,
+h2 {
+  color: #d3d3d3;
+  text-align: center;
+  margin: 50px;
+}
+
+h1 {
+  font-size: 3em;
+}
+
+h2 {
+  font-size: 1.5em;
+}
+
+p {
+  position: fixed;
+  top: 50vh;
+  right: 3vw;
+  transform: translateY(-50%);
+  text-align: center;
+  width: 4em;
+  height: 4em;
+  border-radius: 50%;
+  border: 1px solid red;
+  font-size: 1em;
+  cursor: pointer;
+  line-height: 3.7em;
+  color: #d3d3d3;
+  background-color: #242424;
+  font-weight: normal;
+  transition: all 0.3s;
+}
+
+/* 애니메이션 */
+@keyframes slide {
+  from {
+    transform: translateX(0vw);
+  }
+  to {
+    transform: translateX(80vw);
+  }
+}
+
+.slide {
+  animation: slide 3s infinite both;
+}
+
+/* 박스 */
+.box {
+  width: 5vw;
+  height: 5vw;
+  background-color: #fcfcfc;
+  margin: 3vw 5vw;
+}
+
+#box1 {
+  animation-timing-function: ease;
+}
+
+#box2 {
+  animation-timing-function: linear;
+}
+
+#box3 {
+  animation-timing-function: ease-in;
+}
+
+#box4 {
+  animation-timing-function: ease-out;
+}
+
+#box5 {
+  animation-timing-function: ease-in-out;
+}
+
+#box6 {
+  animation-timing-function: cubic-bezier(0, 0, 0, 0);
+}
+
+#box7 {
+  animation-timing-function: cubic-bezier(1, 0, 0, 1);
+}
+
+#box8 {
+  animation-timing-function: cubic-bezier(0, 1, 1, 0);
+}
+
+#box9 {
+  animation-timing-function: cubic-bezier(1, 0, 0, 0);
+}
+
+#box10 {
+  animation-timing-function: cubic-bezier(0, 0, 0, 1);
+}
+
+#box11 {
+  animation-timing-function: cubic-bezier(0, 1, 0, 0);
+}
+
+#box12 {
+  animation-timing-function: cubic-bezier(0, 0, 1, 0);
+}
+
+#box13 {
+  animation-timing-function: cubic-bezier(0, 1, 0, 1);
+}
+
+#box14 {
+  animation-timing-function: cubic-bezier(1, 0, 1, 0);
+}
+
+#box15 {
+  animation-timing-function: cubic-bezier(0, 0, 1, 1);
+}
+
+#box16 {
+  animation-timing-function: cubic-bezier(0, 1, 1, 1);
+}
+
+#box17 {
+  animation-timing-function: cubic-bezier(1, 1, 1, 0);
+}
+
+#box18 {
+  animation-timing-function: cubic-bezier(0, 0.333, 0.666, 0.999);
+}
+
+#box19 {
+  animation-timing-function: cubic-bezier(0.999, 0.666, 0.333, 0);
+}
