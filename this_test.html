@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button id="버튼">버튼</button>
+    <script>
+      console.log(this); //{window}출력
+
+      function 함수() {
+        console.log(this);
+      }
+      함수(); //{window}출력
+
+      var 오브젝트 = {
+        data: "kim",
+        함수: function () {
+          console.log(this);
+        },
+      };
+      오브젝트.함수(); //{오브젝트}출력
+
+      var 오브젝트2 = {
+        data: {
+          함수: function () {
+            console.log(this);
+          },
+        },
+      };
+      오브젝트2.data.함수(); //{오브젝트2.data}출력
+
+      var 오브젝트3 = {
+        data: {
+          함수: () => {
+            console.log(this);
+          },
+        },
+      };
+      오브젝트3.data.함수(); //{window}출력
+
+      function 기계() {
+        this.이름 = "kim";
+      }
+      var 오브젝트4 = new 기계(); //{이름: 'kim'}출력
+
+      document.getElementById("버튼").addEventListener("click", function (e) {
+        console.log(this); //<button id="버튼">버튼</button>이 출력
+        console.log(e.currentTarget); //와 같음,
+      });
+
+      var 어레이 = [1, 2, 3];
+      어레이.forEach(function (a) {
+        console.log(this);
+      }); //{window}출력
+
+      var 오브젝트5 = {
+        이름들: ["김", "이", "박"],
+        함수: function () {
+          console.log(this); //{오브젝트5}출력
+          오브젝트5.이름들.forEach(function () {
+            console.log(this);
+          });
+        },
+      };
+      오브젝트5.함수(); //{window}출력
+
+      var 오브젝트6 = {
+        이름들: ["김", "이", "박"],
+        함수: function () {
+          오브젝트6.이름들.forEach(() => {
+            console.log(this);
+          });
+        },
+      };
+      오브젝트6.함수(); //{오브젝트6}출력
+    </script>
+  </body>
+</html>
