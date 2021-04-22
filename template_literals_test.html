@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- <script>
+      var pants = 20;
+      var socks = 100;
+      `바지${pants} 양말${socks}`;
+
+      function 해체분석기(문자, 변수1, 변수2) {
+        console.log(문자[1] + " " + 변수1 + " " + 문자[0] + " " + 변수2);
+      }
+      해체분석기`바지${pants} 양말${socks}`;
+    </script> -->
+
+    <script>
+      var pants = 0;
+      var socks = 0;
+      `바지${pants} 양말${socks}`;
+
+      function 해체분석기(문자, 변수1, 변수2) {
+        if (0 < pants && 0 < socks) {
+          console.log(문자[0] + 변수1 + 문자[1] + 변수2);
+        } else if (0 == pants && 0 == socks) {
+          console.log("바지, 양말 안 팔아요");
+        } else if (0 == pants) {
+          console.log("바지 안 팔아요" + 문자[1] + 변수2);
+        } else if (0 == socks) {
+          console.log(문자[0] + 변수1 + "양말 안 팔아요");
+        } else {
+        }
+      }
+      해체분석기`바지${pants} 양말${socks}`;
+    </script>
+  </body>
+</html>
