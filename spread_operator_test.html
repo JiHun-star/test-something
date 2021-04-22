@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var 어레이 = ["hello", "world"];
+      console.log(어레이);
+      console.log(...어레이);
+
+      var 문자 = "hellow";
+      console.log(문자);
+      console.log(...문자); //"h", "e", "l", "l", "o", "w"와 같음
+
+      var a = [1, 2, 3];
+      var b = [4, 5];
+      var c = [...a, ...b];
+      console.log(c);
+
+      var d = [1, 2, 3];
+      var e = d;
+      d[3] = 4;
+      console.log(d);
+      console.log(e);
+
+      var f = [1, 2, 3];
+      var g = [...f];
+      g[3] = 4;
+      console.log(f);
+      console.log(g);
+
+      var o1 = {
+        a: 1,
+        b: 2,
+      };
+      var o2 = {
+        ...o1,
+        c: 3,
+        a: 5,
+      };
+      console.log(o2);
+    </script>
+
+    <script>
+      function 더하기(a, b, c) {
+        console.log(a + b + c);
+      }
+      var ar = [10, 20, 30];
+      더하기(ar);
+      더하기(ar[0], ar[1], ar[2]);
+      더하기.apply(undefined, ar);
+      더하기(...ar);
+    </script>
+
+    <script>
+      var person = {
+        인사: function () {
+          console.log(this.name + "안녕");
+        },
+      };
+
+      var person2 = {
+        name: "손흥민",
+      };
+
+      person.인사();
+      person.인사.apply(person2);
+      person.인사.call(person2);
+    </script>
+  </body>
+</html>
