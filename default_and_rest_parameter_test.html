@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- <script>
+      var a = [1, 2, 3];
+      var b = "김밥";
+      var c = [...b, ...a];
+      console.log(c); //김 밥 1 2 3이 출력
+    </script> -->
+
+    <!-- <script>
+      var a = [1, 2, 3];
+      var b = ["you", "are"];
+      var c = function (a, b) {
+        console.log([[...a], ...[...b]][1]);
+      };
+      c(a, b); //you가 출력
+    </script> -->
+
+    <!-- <script>
+      function 함수(a = 5, b = a * 2) {
+        console.log(a + b);
+        return 10;
+      }
+      함수(3); //9가 출력
+    </script> -->
+
+    <!-- <script>
+      function 함수(a = 5, b = a * 2) {
+        console.log(a + b);
+      }
+      함수(undefined, undefined); //15가 출력
+    </script> -->
+
+    <!-- <script>
+      function 어레이(...a) {
+        return a;
+      }
+
+      var newArray = 어레이(1, 2, 3, 4, 5);
+      console.log(newArray);
+    </script> -->
+
+    <!-- <script>
+      var numbers = [2, 3, 4, 5, 6, 1, 3, 2, 5, 5, 4, 6, 7];
+      console.log(Math.max(...numbers));
+    </script> -->
+
+    <!-- <script>
+      function 정렬(a) {
+        console.log([...a].sort());
+      }
+
+      정렬("bear");
+    </script> -->
+
+    <script>
+      글자세기("aacbbb");
+
+      function 글자세기(글자) {
+        var 결과 = {};
+
+        [...글자].forEach((a) => {
+          //결과에 a가 있으면 a = a+1
+          if (결과[a] > 0) {
+            결과[a]++;
+          }
+          //없으면 a : 1을 집어 넣음
+          else {
+            결과[a] = 1;
+          }
+        });
+
+        console.log(결과);
+      }
+    </script>
+  </body>
+</html>
