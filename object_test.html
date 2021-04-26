@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- <script>
+    var 이름1 = '김';
+    var 이름2 = 이름1; //김 출력
+    이름1 = '박'; //박 출력
+  </script> -->
+
+    <!-- <script>
+      var 이름1 = { name: "김" };
+      var 이름2 = 이름1; //name:박 출력
+      이름1.name = "박"; //name:박 출력
+    </script> -->
+
+    <!-- <script>
+      var 이름1 = { name: "김" };
+      var 이름2 = { name: "김" };
+      이름1==이름2; //false 출력
+    </script> -->
+
+    <script>
+      var 이름 = { name: "김" };
+      function 변경(obj) {
+        obj.name = "박";
+      }
+      변경(이름); //변경됨
+
+      function 변경2(obj) {
+        obj = { name: "이" };
+      }
+      변경2(이름); //변경 안 됨
+    </script>
+  </body>
+</html>
