@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      class 강아지 {
+        constructor(t, c) {
+          this.type = t;
+          this.color = c;
+        }
+        한살먹기() {
+          if (this instanceof 고양이) {
+            this.age++;
+          }
+        }
+      }
+      var 강아지1 = new 강아지("말티즈", "white");
+      var 강아지2 = new 강아지("진돗개", "brown");
+
+      class 고양이 extends 강아지 {
+        constructor(t, c, a) {
+          super(t, c);
+          this.age = a;
+        }
+      }
+      var 고양이1 = new 고양이("코숏", "white", 5);
+      var 고양이2 = new 고양이("러시안블루", "brown", 2);
+      고양이1.한살먹기();
+      고양이2.한살먹기();
+    </script>
+
+    <script>
+      class 스테이터스 {
+        constructor() {
+          this.공격력 = 5;
+          this.체력 = 100;
+        }
+        get battlePoint() {
+          var bp = this.공격력 + this.체력;
+          return bp;
+        }
+        set heal(h) {
+          var plusHp = parseInt(h);
+          this.체력 = this.체력 + plusHp;
+        }
+      }
+    </script>
+
+    <script>
+      var data = {
+        odd: [],
+        even: [],
+        set setter(...s) {
+          s.forEach((e) => {
+            if (e % 2 == 0) {
+              data.even.push(e);
+            } else {
+              data.odd.push(e);
+            }
+          });
+        },
+        get getter() {
+          return [...this.odd, ...this.even].sort();
+        },
+      };
+    </script>
+  </body>
+</html>
