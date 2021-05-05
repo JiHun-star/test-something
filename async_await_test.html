@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- <script>
+      async function 더하기(){
+        var 어려운연산 = new Promise((성공, 실패)=>{
+          실패();
+        });
+
+        try {  var 결과 = await 어려운연산 }
+        catch { 어려운연산 Promise가 실패할 경우 실행할 코드 }
+      }
+    </script> -->
+
+    <button id="test">버튼</button>
+    <script>
+      async function 버튼클릭() {
+        let 프로미스 = new Promise(function (resolve, reject) {
+          let 버튼 = document.getElementById("test");
+          버튼.addEventListener("click", () => {
+            resolve(`성공했어요!`);
+          });
+        });
+
+        let 결과 = await 프로미스;
+        console.log(결과);
+      }
+
+      버튼클릭();
+    </script>
+  </body>
+</html>
