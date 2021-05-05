@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- <script>
+      class 부모 {}
+      부모.prototype.name = "Park";
+
+      var 오브젝트 = new 부모();
+
+      for (var key in 오브젝트) {
+        console.log(오브젝트[key]);
+      }
+    </script>
+
+    <script>
+      class 부모 {}
+      부모.prototype.name = "Park";
+
+      var 오브젝트 = new 부모();
+
+      for (var key in 오브젝트) {
+        if (오브젝트.hasOwnProperty(key)) {
+          console.log(오브젝트[key]);
+        }
+      }
+    </script>
+
+    <script>
+      var 어레이 = [2, 3, 4, 5];
+
+      console.log(어레이[Symbol.iterator]());
+
+      for (var 자료 of 어레이) {
+        console.log(자료);
+      }
+    </script> -->
+
+    <script>
+      let 구구단 = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+      for (let i = 2; i < 10; i++) {
+        for (let j of 구구단) {
+          let 결과 = i * j;
+          console.log(i + "x" + j + "=" + 결과);
+        }
+      }
+    </script>
+  </body>
+</html>
